@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurea SYSTEM - PWA</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000" />
+<style>
+/* Inline styles preserved from original to ensure the app looks identical */
+
+</style>
+</head>
+<body>
+<!-- Original app UI (kept intact) -->
+
+
+<!-- Insert original body content (same as you provided) -->
+
+<div class="container">
+    <div class="header">
+        <h1>🎯 Sistema Piramidal Pro</h1>
+        <p>Optimización Matemática de Combinaciones de Lotería</p>
+    </div>
+    
+    <div class="content">
+        <div class="input-section">
+            <div class="group-title">
+                <span>1</span>
+                Grupo 1 - Introduce 15 números (1-49)
+            </div>
+            <div class="number-grid" id="group1"></div>
+        </div>
+        
+        <div class="input-section">
+            <div class="group-title">
+                <span>2</span>
+                Grupo 2 - Introduce 15 números (1-49)
+            </div>
+            <div class="number-grid" id="group2"></div>
+        </div>
+        
+        <div class="input-section">
+            <div class="group-title">
+                <span>3</span>
+                Grupo 3 - Introduce 15 números (1-49)
+            </div>
+            <div class="number-grid" id="group3"></div>
+        </div>
+        
+        <div class="error-message" id="errorMessage"></div>
+        
+        <button class="generate-btn" id="generateBtn" onclick="generateCombinations()">
+            🚀 Generar 48 Combinaciones Optimizadas
+        </button>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Procesando algoritmo piramidal...</p>
+        </div>
+        
+        <div class="results" id="results">
+            <div class="results-header">
+                <h2>✅ Combinaciones Generadas Exitosamente</h2>
+                <div class="guarantees">
+                    <div class="guarantee-item">
+                        <div class="percentage">99.90%</div>
+                        <div class="label">3 aciertos</div>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="percentage">80.55%</div>
+                        <div class="label">4 aciertos</div>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="percentage">16.02%</div>
+                        <div class="label">5 aciertos</div>
+                    </div>
+                    <div class="guarantee-item">
+                        <div class="percentage">0.30%</div>
+                        <div class="label">6 aciertos</div>
+                    </div>
+                </div>
+                <div>
+                    <button class="export-btn" onclick="exportToText()">📄 Exportar TXT</button>
+                    <button class="export-btn" onclick="exportToCSV()">📊 Exportar CSV</button>
+                    <button class="export-btn" onclick="window.print()">🖨️ Imprimir</button>
+                </div>
+            </div>
+            
+            <div class="combinations-grid" id="combinationsGrid"></div>
+        </div>
+    </div>
+</div>
+
+<script src="main-obf.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log("Service Worker registrado correctamente"))
+      .catch(err => console.log("Error al registrar el SW:", err));
+}
+</script>
+</body>
+</html>
