@@ -1,7 +1,7 @@
 {
   "name": "Aurea SYSTEM",
   "short_name": "Aurea SYSTEM",
-  "start_url": "./index.html",
+  "start_url": "/Aurea-system/index.html",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
